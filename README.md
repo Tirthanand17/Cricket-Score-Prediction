@@ -9,7 +9,7 @@ This public repository is a lightweight demonstration derived from my larger aca
 - Python data processing and feature engineering
 - Live match-state transformation
 - XGBoost-ready tabular features
-- Leakage-aware train/test thinking
+- Leakage-aware evaluation thinking
 - Model evaluation with MAE and RMSE
 - Clean, testable project structure
 - Practical ML code that can be adapted to client datasets
@@ -20,12 +20,12 @@ The feature pipeline converts a match state into model-ready variables such as:
 
 - current runs
 - wickets lost
+- balls bowled
 - overs completed
 - current run rate
 - balls remaining
 - wickets remaining
 - recent scoring rate
-- projected baseline score
 
 ## Research results from the full private project
 
@@ -46,6 +46,8 @@ src/
   baseline.py       # transparent baseline score projection
 tests/
   test_features.py  # unit tests for the feature pipeline
+.github/workflows/
+  tests.yml         # automated test workflow
 requirements.txt
 ```
 
@@ -69,7 +71,7 @@ from src.baseline import projected_total
 state = MatchState(
     current_runs=128,
     wickets_lost=3,
-    overs_completed=15.0,
+    balls_bowled=90,
     recent_runs=42,
     recent_balls=30,
 )
@@ -81,7 +83,7 @@ print(projected_total(state))
 
 ## Notes
 
-The public demo intentionally avoids publishing proprietary data, private model artifacts, or large research files. It is meant to show code quality, ML workflow design, and the type of delivery I can provide for data-science and machine-learning projects.
+The public demo intentionally avoids publishing private datasets, private model artifacts, or large research files. It is meant to show code quality, ML workflow design, and the type of delivery I can provide for data-science and machine-learning projects.
 
 ## Skills
 
