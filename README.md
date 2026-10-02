@@ -1,5 +1,7 @@
 # Cricket Score Prediction — Public Portfolio Demo
 
+[![Tests](https://github.com/Tirthanand17/Cricket-Score-Prediction/actions/workflows/tests.yml/badge.svg)](https://github.com/Tirthanand17/Cricket-Score-Prediction/actions/workflows/tests.yml)
+
 A compact, reproducible machine-learning portfolio project for forecasting cricket innings totals from live match state.
 
 This public repository is a lightweight demonstration derived from my larger academic cricket analytics project. The full research system, large datasets, trained artifacts, and production evidence remain private.
